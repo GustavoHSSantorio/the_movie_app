@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0_9eaf0c8ea5ad33a0347e7775ef2dfac3cce2edc2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/63ab0d8feb0d9561b7e25be817dde98d51e1aa82/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a6c7740e562c3640ef06597f2467b2420fdc599f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="919f0dfe192fb4e063e7dacadee7f8bb9a2672a9">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/annotations-13.0_d640a297d1fee1537b089ae1bb0c77cc88bafa58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/32c2754af2c3c051187cc32297ff4a63e49dc700/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_395a63ebb5d830b1294319f5ac2b1d3e157b146c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/c0e910c8facd86a69ec6599baffd538803932bb9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e0daac6581180942da0befc5606eb9a70d0a3292">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f7612dd6bd2218d8199aedb23a577e976b27f07c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/2477d9d2b027782168967aae3b1c208253a99104/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4bb0f4d1e13241dc7a151dff21f8f53f94b291c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/e48e5750febbd3e3866d201f9ceff84eae5d1e9d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_98cc2c357770932121e57a7cfdda10b4f05cc55a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/8bf37baeec214c672880f9e201f9bdaba6fad13b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_026fdc5ebd85a21402bd47fec7e8f46e8bc302ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/d1c7d44a67f83dbe73e058c7e9c5733b16c5ab4f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f7b8c876deaf01069f592caf5746a23e91061128/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/e660e16c312943ba3f196582684490d850548a8b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c3cd1cce2208779bd0c3f60f77010b26cb253d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/cfebb486bf8347ab175a38fd6132a9006a8da9bb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7308e3af7d60dc1aee25f7fd96d85f768174b602/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/9b687260f9781631781d69f849fe396d11ed7127/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4e2c2e803806149290ad082f963d05c05754ed0b">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_088df3a036ab1b74e28e224637925be377f32e4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3fc34d162f6bec1cedbd5abeac6ca3cb70333f23">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9b7021474d50dae4cc5f3b6a12032c3ec58fe714/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/9ee6d459e035deca67642e951c3a84ba9c713164/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1c5b96ee9b3127a8ac965a8f71c6eb7cbf0d8ffe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bd2783d17952340f45b40cd5c415f4787bd5ff57/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/2293493458c33c13c323f11686ffbed4d4c00c80/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f310a2b51da2426ed69bcb5aa81e40c7ee940008/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/93c76cad5c6d2a3d8c672a69f91bb676b44171e2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6528f44241b53f363221a751e9d65ba729f60273/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/4387000ef4e64bb931f6c5d730607bb24626637c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ddbe609b491f9f63a267330a54ce2bc25085266d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7f07ece855a7d40d5ef430218593e92282ae2a74">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/kotlin-stdlib-1.1.4-3_a461b056f8d5533f713502f99269ba1d715f330f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/c73d2bb43fc25f8e081d2243df45cef76b253ae2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4a874b71d6bd12f0cede18b30fe5a8d21fc83f84/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.1.0_48d2831730383339f3f80df38604b91a749928a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/c78b68a06252e222bf77fa721f1c6a1b5c27a442/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2a8ae98e8668bd56c20c8e8420ecfaae7556cc87/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0_b6cacd68edac2cdd8114f1291ce40b39f1958eec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_b0b7e1e12da3badea6f79c3a404d45562e911c8b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/ccc8be53bab6e078506c5f08eac0eac004b23a31/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5cc16423c368e5c7dc9b63f44faf06d50537b8ab/classes.dex" />
+    </item>
+
+</items>

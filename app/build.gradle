@@ -1,4 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+def retrofitVersion = '2.3.0'
+def rxJavaRetrofitVersion = '1.1.0'
+def gsonLibVersion = '2.6'
 
 android {
     compileSdkVersion 26
@@ -27,6 +35,26 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:cardview-v7:26.+'
+
+    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: "$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+//    compile "io.reactivex.rxjava2:rxandroid:2.0.1"
+    compile "io.reactivex:rxandroid:$rxJavaRetrofitVersion"
+//    compile "io.reactivex:rxjava:$rxJavaRetrofitVersion"
+
+
+    compile "com.google.code.gson:gson:$gsonLibVersion"
+
+    compile "android.arch.lifecycle:runtime:1.0.0"
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
+    compile "android.arch.lifecycle:extensions:1.0.0-alpha9-1"
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     testCompile 'junit:junit:4.12'
 }
