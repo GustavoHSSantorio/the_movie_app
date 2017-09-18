@@ -41,10 +41,7 @@ dependencies {
 
     compile "com.google.code.gson:gson:$gsonLibVersion"
 
-
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-
 
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
@@ -54,6 +51,10 @@ dependencies {
     compile 'android.arch.lifecycle:runtime:1.0.0'
     compile 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
     compile 'com.stepstone.apprating:app-rating:2.0.0'
-    testCompile 'junit:junit:4.12'
     annotationProcessor 'android.arch.lifecycle:compiler:1.0.0-alpha9-1'
+
+    testCompile 'junit:junit:4.12'
+    androidTestCompile ('com.android.support.test.espresso:espresso-core:2.2.2'){
+        exclude module: 'support-annotations'
+    }
 }

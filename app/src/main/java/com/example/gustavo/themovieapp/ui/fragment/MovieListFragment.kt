@@ -29,9 +29,21 @@ class MovieListFragment : Fragment() {
         }
     }
 
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater?.inflate(R.layout.fragment_movie_list, container, false)
 
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        srl_refresh.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
+        srl_refresh.setOnRefreshListener { ->
+            forwardToMovieCall()
+        }
+    }
     override fun onResume() {
         super.onResume()
         forwardToMovieCall()
@@ -47,6 +59,7 @@ class MovieListFragment : Fragment() {
     }
 
     fun setAdapter(adapter : MovieListAdapter){
+        srl_refresh.setRefreshing(false)
         rv_list.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
         rv_list.adapter = adapter
     }
