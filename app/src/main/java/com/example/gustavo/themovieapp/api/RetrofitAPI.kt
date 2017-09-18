@@ -1,5 +1,6 @@
 package com.example.gustavo.themovieapp.api
 
+import com.example.gustavo.themovieapp.model.Configuration
 import com.example.gustavo.themovieapp.model.Result
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
@@ -19,6 +20,14 @@ interface RetrofitAPI {
     @GET("movie/popular")
     fun searchPopular(@Query("api_key") key: String, @Query("language") language : String, @Query("page") page : String): Observable<Result>;
 
+    @GET("movie/upcoming")
+    fun searchUpcoming(@Query("api_key") key: String, @Query("language") language : String, @Query("page") page : String): Observable<Result>;
+
+    @GET("search/movie")
+    fun searchMovie(@Query("api_key") key: String, @Query("language") language : String, @Query("query") query : String, @Query("page") page : String): Observable<Result>;
+
+    @GET("configuration")
+    fun getConfigurations(@Query("api_key") key: String) : Observable<Configuration>
 
     companion object Factory{
         fun create(): RetrofitAPI {

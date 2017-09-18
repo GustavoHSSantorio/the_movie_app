@@ -1,25 +1,21 @@
 package com.example.gustavo.themovieapp.ui.activity
 
-import android.app.Fragment
-import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
+import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import com.example.gustavo.themovieapp.R
-import com.example.gustavo.themovieapp.model.Movie
-import com.example.gustavo.themovieapp.ui.adapter.MovieListAdapter
-import com.example.gustavo.themovieapp.ui.fragment.MovieListFragment
-import com.example.gustavo.themovieapp.util.Constants
-import com.example.gustavo.themovieapp.vm.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import android.app.SearchManager
+import android.content.Context
+import android.content.Intent
+import android.widget.SearchView
 
-class MainActivity : BasicActivity(MainViewModel::class.java), NavigationView.OnNavigationItemSelectedListener{
 
-    var fragment: Fragment? = null
+class MainActivity : BasicListActivity(), NavigationView.OnNavigationItemSelectedListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +29,24 @@ class MainActivity : BasicActivity(MainViewModel::class.java), NavigationView.On
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        nav_view.setCheckedItem(R.id.nav_top_rated)
 
-        observeMovies();
+        observeMovies()
+        navigate(R.id.nav_top_rated)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.search_menu, menu)
+
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView = menu!!.findItem(R.id.search).actionView as SearchView
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(componentName))
+        searchView.isSubmitButtonEnabled = true
+        searchView.isIconified = true
+        searchView.setIconifiedByDefault(false);
+
+        return true
     }
 
     override fun onBackPressed() {
@@ -46,78 +58,16 @@ class MainActivity : BasicActivity(MainViewModel::class.java), NavigationView.On
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-
-        if (id == R.id.nav_camera) {
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-        navigate(id)
+        if(item.itemId.equals(R.id.nav_share))
+            showRateDialog()
+        else
+            navigate(item.itemId)
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
 
-    fun loadMovies(){
-        (getViewModel() as MainViewModel).loadMovies(0)
-    }
-
-    fun observeMovies(){
-        (getViewModel() as MainViewModel).movieList.observe(this, Observer<List<Movie>> { movies ->
-            (fragment as MovieListFragment).setAdapter(MovieListAdapter(movies!!){
-//                Implements onclick
-            })
-        })
-    }
-
-    private fun getFragmentById(id: Int): Fragment? {
-        fragmentManager.executePendingTransactions()
-
-        when (id) {
-            R.id.nav_camera -> fragment = MovieListFragment.newInstance()
-        }
-
-        return fragment
-    }
-
-    private fun getFragmentTagById(id: Int): String? {
-        fragmentManager.executePendingTransactions()
-        var fragment: String? = null
-
-        when (id) {
-            R.id.nav_camera -> fragment = Constants.MainConstants.ROUTES_NAVIGATION_TAG
-       }
-
-        return fragment
-    }
-
-    private fun isFragmentInBackstack(fragmentTagName: String?): Boolean {
-        for (entry in 0..fragmentManager.backStackEntryCount - 1) {
-            if (fragmentTagName == fragmentManager.getBackStackEntryAt(entry).name) {
-                return true
-            }
-        }
-        return false
-    }
-
-    fun navigate(id: Int) {
-        val tag = getFragmentTagById(id)
-        if (isFragmentInBackstack(tag)) {
-            fragmentManager.popBackStackImmediate(tag, 0)
-        } else {
-            val transaction = fragmentManager.beginTransaction()
-            transaction.replace(R.id.fl_content, getFragmentById(id), tag)
-            transaction.addToBackStack(tag)
-            transaction.commit()
-        }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }

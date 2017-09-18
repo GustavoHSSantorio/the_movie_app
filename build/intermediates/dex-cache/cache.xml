@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="3fc34d162f6bec1cedbd5abeac6ca3cb70333f23">
+        sha1="528ab1c53207493b17655201abdd4780aac46e11">
         <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9b7021474d50dae4cc5f3b6a12032c3ec58fe714/classes.dex" />
     </item>
     <item
@@ -165,6 +165,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/foursys/.android/build-cache/1e830d5d9daf1b28744bf2c30f2160b7d6d7c1c6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6704348fd0b07ea6ef037c7a0d126cbda1731559">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7bd47760394f074f025e9dac9ba6e25a755fa956/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.4-3/7f07ece855a7d40d5ef430218593e92282ae2a74/kotlin-stdlib-1.1.4-3.jar"
         jumboMode="true"
         optimize="true"
@@ -207,6 +216,15 @@
         revision="26.0.1"
         sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
         <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0_b6cacd68edac2cdd8114f1291ce40b39f1958eec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/foursys/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.1.2-4/e6a7403299b8f3126e3a1576c02e3f07ae5af6fa/kotlin-stdlib-jre7-1.1.2-4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e6a7403299b8f3126e3a1576c02e3f07ae5af6fa">
+        <dex dex="/Users/foursys/StudioProjects/the_movie_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/kotlin-stdlib-jre7-1.1.2-4_c2dfdf24c798bc0e68d091922d04f171498ee31e/classes.dex" />
     </item>
     <item
         is-multidex="true"
