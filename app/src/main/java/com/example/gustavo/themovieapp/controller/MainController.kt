@@ -7,11 +7,13 @@ import com.example.gustavo.themovieapp.api.RetrofitAPI
 import com.example.gustavo.themovieapp.model.Configuration
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
+import com.example.gustavo.themovieapp.model.Error
+
 
 /**
  * Created by Gustavo on 16/09/17.
  */
-class MainController : BasicController(){
+class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.model.Error>) : BasicController(){
 
     val retrofitApi = RetrofitAPI.create();
 
@@ -26,6 +28,7 @@ class MainController : BasicController(){
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
                 })
     }
 
@@ -39,7 +42,8 @@ class MainController : BasicController(){
                             movieLiveData.value = result.movies
                         }
                         , {error ->
-                    Log.e("CONTROLLER", error.message)
+                            Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
                 })
     }
 
@@ -53,7 +57,8 @@ class MainController : BasicController(){
                             movieLiveData.value = result.movies
                         }
                         , {error ->
-                    Log.e("CONTROLLER", error.message)
+                            Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
                 })
     }
 
@@ -68,6 +73,7 @@ class MainController : BasicController(){
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
                 })
     }
 
@@ -81,7 +87,8 @@ class MainController : BasicController(){
                             movieLiveData.value = result
                         }
                         , {error ->
-                    Log.e("CONTROLLER", error.message)
+                            Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
                 })
     }
 }

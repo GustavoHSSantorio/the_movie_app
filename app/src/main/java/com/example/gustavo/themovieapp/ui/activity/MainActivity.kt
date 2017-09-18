@@ -31,6 +31,7 @@ class MainActivity : BasicListActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.setCheckedItem(R.id.nav_top_rated)
 
+        observeError()
         observeMovies()
         navigate(R.id.nav_top_rated)
     }

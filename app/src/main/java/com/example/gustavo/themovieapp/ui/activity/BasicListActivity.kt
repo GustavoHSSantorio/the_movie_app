@@ -1,11 +1,12 @@
 package com.example.gustavo.themovieapp.ui.activity
 
+import android.app.AlertDialog
 import android.app.Fragment
 import android.arch.lifecycle.Observer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
 import com.example.gustavo.themovieapp.R
+import com.example.gustavo.themovieapp.model.Error
 import com.example.gustavo.themovieapp.model.Movie
 import com.example.gustavo.themovieapp.ui.adapter.MovieListAdapter
 import com.example.gustavo.themovieapp.ui.fragment.MovieListFragment
@@ -14,6 +15,10 @@ import com.example.gustavo.themovieapp.vm.MainViewModel
 import com.stepstone.apprating.AppRatingDialog
 import com.stepstone.apprating.listener.RatingDialogListener
 import java.util.*
+import android.R.string.cancel
+import android.content.DialogInterface
+
+
 
 open class BasicListActivity : BasicActivity(MainViewModel::class.java), RatingDialogListener {
 

@@ -45,7 +45,8 @@
                 android:id="@+id/iv_image"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_alignParentEnd="true"/>
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"

@@ -29,6 +29,8 @@
     <!-- Dialog -->
     <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
         <item name="buttonBarPositiveButtonStyle">@style/MyAlertDialogButtonStyle</item>
         <item name="buttonBarNegativeButtonStyle">@style/MyAlertDialogButtonStyle</item>
     </style>

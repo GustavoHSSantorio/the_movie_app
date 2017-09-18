@@ -16,6 +16,7 @@ class SplashActivity : BasicActivity(MainViewModel::class.java) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        observeError()
         observeConfiguration();
         (getViewModel() as MainViewModel).getConfiguration()
     }
@@ -24,7 +25,7 @@ class SplashActivity : BasicActivity(MainViewModel::class.java) {
         (getViewModel() as MainViewModel).configuration.observe(this, Observer<Configuration>{ configuration ->
             ConfigurationUtils.base_url = configuration?.images?.base_url
             ConfigurationUtils.secure_base_url = configuration?.images?.secure_base_url
-            ConfigurationUtils.backdrop_sizes = configuration?.images!!.backdrop_sizes[0]
+            ConfigurationUtils.backdrop_sizes = configuration?.images!!.backdrop_sizes[2]
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         })

@@ -1,14 +1,14 @@
 package com.example.gustavo.themovieapp.ui.activity
 
-import android.app.Fragment
+import android.support.v7.app.AlertDialog
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleRegistry
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
-import com.example.gustavo.themovieapp.R
-import com.example.gustavo.themovieapp.ui.fragment.MovieListFragment
-import com.example.gustavo.themovieapp.util.Constants
+import com.example.gustavo.themovieapp.model.Error
+import com.example.gustavo.themovieapp.vm.BasicViewModel
 import com.example.gustavo.themovieapp.vm.MainViewModel
 
 /**
@@ -23,4 +23,17 @@ open class BasicActivity(val modelClass: Class<out ViewModel>) : AppCompatActivi
 
     fun getViewModel() : ViewModel = ViewModelProviders.of(this).get(modelClass)
 
+    fun observeError(){
+        (getViewModel() as BasicViewModel).error.observe(this, Observer<Error> { error ->
+            showErrorDialog(error!!.menssagem!!)
+        })
+    }
+
+    fun showErrorDialog(message : String){
+        AlertDialog.Builder(this).setTitle("Problema").setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("ok") { dialog, id ->
+                    dialog.cancel()
+                }.create().show()
+    }
 }
