@@ -14,26 +14,35 @@ class MainViewModel : BasicViewModel(){
     val movieList : MutableLiveData<List<Movie>> = MutableLiveData();
     val configuration : MutableLiveData<Configuration> = MutableLiveData();
 
+    private var page : Int = 0
+
     val controller : MainController = MainController(error);
 
-    fun loadMoviesNowPlayng(){
-        controller.getListNowPlayng(movieList);
+    fun loadMoviesNowPlayng(page : Int){
+        controller.getListNowPlayng(movieList, page);
     }
 
-    fun loadMoviesPopular(){
-        controller.getListPopular(movieList);
+    fun loadMoviesPopular(page : Int){
+        controller.getListPopular(movieList, page);
     }
 
-    fun loadMoviesUpcoming(){
+    fun loadMoviesUpcoming(page : Int){
         controller.getListUpcoming(movieList);
     }
 
-    fun searchForMovies(query : String){
+    fun searchForMovies(query : String, page : Int){
         controller.getListSearched(movieList, query);
     }
 
     fun getConfiguration(){
         controller.getConfiguration(configuration);
     }
+
+    fun reinitNextPage() {
+        page = 0
+        movieList.value = null
+    }
+
+    fun getNextPage() : Int = ++page
 
 }

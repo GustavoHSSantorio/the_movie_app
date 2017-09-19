@@ -9,5 +9,6 @@ class ConfigurationUtils {
         var base_url : String? = null
         var secure_base_url : String? = null
         var backdrop_sizes : String? = null
+        var logo_sizes : String? = null
     }
 }

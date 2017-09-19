@@ -24,25 +24,28 @@ open class BasicListActivity : BasicActivity(MainViewModel::class.java), RatingD
 
     var fragment: Fragment? = null
 
-    fun loadMoviesNowPlayng(){
-        (getViewModel() as MainViewModel).loadMoviesNowPlayng()
+    fun loadMoviesNowPlayng(page : Int){
+        (getViewModel() as MainViewModel).loadMoviesNowPlayng(page)
     }
 
-    fun loadMoviesPopular(){
-        (getViewModel() as MainViewModel).loadMoviesPopular()
+    fun loadMoviesPopular(page : Int){
+        (getViewModel() as MainViewModel).loadMoviesPopular(page)
     }
 
-    fun loadMoviesUpcoming(){
-        (getViewModel() as MainViewModel).loadMoviesUpcoming()
+    fun loadMoviesUpcoming(page : Int){
+        (getViewModel() as MainViewModel).loadMoviesUpcoming(page)
     }
 
-    fun searchForMovies(query : String){
-        (getViewModel() as MainViewModel).searchForMovies(query)
+    fun searchForMovies(query : String, page : Int){
+        (getViewModel() as MainViewModel).searchForMovies(query, page)
     }
 
     fun observeMovies(){
         (getViewModel() as MainViewModel).movieList.observe(this, Observer<List<Movie>> { movies ->
-            (fragment as MovieListFragment).setAdapter(MovieListAdapter(movies!!, this))
+            if(movies != null && movies.size > 0)
+                (fragment as MovieListFragment).updateDataSet(movies)
+            else
+                (fragment as MovieListFragment).showEmptyMessage()
         })
     }
 

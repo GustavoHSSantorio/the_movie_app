@@ -11,20 +11,37 @@ import com.example.gustavo.themovieapp.model.Movie
 import com.example.gustavo.themovieapp.ui.activity.MovieDetailActivity
 import com.example.gustavo.themovieapp.ui.adapter.vh.MovieViewHolder
 import com.example.gustavo.themovieapp.util.Constants
+import android.support.v4.content.ContextCompat.startActivity
+
+
 
 /**
  * Created by Gustavo on 16/09/17.
  */
-class MovieListAdapter(val movies : List<Movie>, val context : Context) : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieListAdapter(var movies : List<Movie>, val context : Context) : RecyclerView.Adapter<MovieViewHolder>() {
 
-    override fun getItemCount(): Int = Integer.MAX_VALUE
-
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) = holder.bind(movies[position % movies.size]){
-        val intent = Intent(context, MovieDetailActivity::class.java)
-        intent.putExtra(Constants.MovieDetailsConstants.MOVIE_EXTRA, movies[position])
-        context.startActivity(intent)
-
+    fun updateDataSet(newList : List<Movie>){
+        movies = newList
+        notifyDataSetChanged()
     }
+
+    override fun getItemCount(): Int = movies.size
+
+    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) = holder.bind(movies[position], object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, MovieDetailActivity::class.java)
+                intent.putExtra(Constants.MovieDetailsConstants.MOVIE_EXTRA, movies[position])
+                context.startActivity(intent)
+            }
+        }, object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val share = Intent(Intent.ACTION_SEND)
+                share.type = "text/plain"
+                share.putExtra(Intent.EXTRA_TEXT, movies[position].title)
+
+                context.startActivity(Intent.createChooser(share, "Onde quer compartilhar?"))
+            }
+        })
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder = MovieViewHolder(parent.inflate())
 

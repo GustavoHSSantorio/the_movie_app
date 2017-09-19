@@ -17,14 +17,17 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
 
     val retrofitApi = RetrofitAPI.create();
 
-    fun getListNowPlayng(movieLiveData: MutableLiveData<List<Movie>>){
-        retrofitApi.searchNowPlayng("dadbc9342b99903fed37ffc73e2833bf", "en-US", "1")
+        fun getListNowPlayng(movieLiveData: MutableLiveData<List<Movie>>, page : Int){
+        retrofitApi.searchNowPlayng("dadbc9342b99903fed37ffc73e2833bf", "en-US", page.toString())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                         {result ->
                             Log.e("CONTROLLER", result.movies.size.toString())
-                            movieLiveData.value = result.movies
+                            if(movieLiveData.value != null)
+                                movieLiveData.value = movieLiveData.value!!.updateMovieList(result.movies)
+                            else
+                                movieLiveData.value = result.movies
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
@@ -32,14 +35,17 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
                 })
     }
 
-    fun getListPopular(movieLiveData: MutableLiveData<List<Movie>>){
-        retrofitApi.searchPopular("dadbc9342b99903fed37ffc73e2833bf", "en-US", "1")
+    fun getListPopular(movieLiveData: MutableLiveData<List<Movie>>, page : Int){
+        retrofitApi.searchPopular("dadbc9342b99903fed37ffc73e2833bf", "en-US", page.toString())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                         {result ->
                             Log.e("CONTROLLER", result.movies.size.toString())
-                            movieLiveData.value = result.movies
+                            if(movieLiveData.value != null)
+                                movieLiveData.value = movieLiveData.value!!.updateMovieList(result.movies)
+                            else
+                                movieLiveData.value = result.movies
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
@@ -54,7 +60,10 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
                 .subscribe(
                         {result ->
                             Log.e("CONTROLLER", result.movies.size.toString())
-                            movieLiveData.value = result.movies
+                            if(movieLiveData.value != null)
+                                movieLiveData.value = movieLiveData.value!!.updateMovieList(result.movies)
+                            else
+                                movieLiveData.value = result.movies
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
@@ -69,7 +78,10 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
                 .subscribe(
                         {result ->
                             Log.e("CONTROLLER", result.movies.size.toString())
-                            movieLiveData.value = result.movies
+                            if(movieLiveData.value != null)
+                                movieLiveData.value = movieLiveData.value!!.updateMovieList(result.movies)
+                            else
+                                movieLiveData.value = result.movies
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
@@ -78,17 +90,23 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
     }
 
 
-    fun getConfiguration(movieLiveData: MutableLiveData<Configuration>){
+    fun getConfiguration(configurationsLiveData: MutableLiveData<Configuration>){
         retrofitApi.getConfigurations("dadbc9342b99903fed37ffc73e2833bf")
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                         {result ->
-                            movieLiveData.value = result
+                            configurationsLiveData.value = result
                         }
                         , {error ->
                             Log.e("CONTROLLER", error.message)
                             erro.value = Error(error.message)
                 })
+    }
+
+    fun List<Movie>.updateMovieList(newList : List<Movie>) : List<Movie>{
+        val mutable : MutableList<Movie> = this as MutableList<Movie>
+        mutable.addAll(newList)
+        return mutable
     }
 }

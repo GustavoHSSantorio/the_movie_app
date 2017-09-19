@@ -4,8 +4,8 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    card_view:cardElevation="10dp"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="5dp"
     card_view:cardPreventCornerOverlap="true"
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="4dp">
@@ -19,13 +19,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1">
             <TextView
                 android:id="@+id/tv_tilte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:layout_toLeftOf="@+id/iv_image"
                 android:layout_toStartOf="@+id/iv_image" />
 
@@ -39,12 +40,13 @@
                 android:layout_alignParentStart="true"
                 android:layout_toLeftOf="@+id/iv_image"
                 android:layout_toStartOf="@+id/iv_image"
+                android:textSize="18sp"
                 android:maxLength="120"/>
 
             <ImageView
                 android:id="@+id/iv_image"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true" />
         </RelativeLayout>
@@ -68,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:tint="@android:color/holo_red_dark"
                 android:src="@android:drawable/ic_menu_share"/>
         </LinearLayout>
     </LinearLayout>

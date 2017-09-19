@@ -26,6 +26,7 @@ class SplashActivity : BasicActivity(MainViewModel::class.java) {
             ConfigurationUtils.base_url = configuration?.images?.base_url
             ConfigurationUtils.secure_base_url = configuration?.images?.secure_base_url
             ConfigurationUtils.backdrop_sizes = configuration?.images!!.backdrop_sizes[2]
+            ConfigurationUtils.logo_sizes = configuration?.images!!.logo_sizes[5]
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         })

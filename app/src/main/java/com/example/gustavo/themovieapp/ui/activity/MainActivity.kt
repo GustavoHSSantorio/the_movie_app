@@ -13,6 +13,7 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.widget.SearchView
+import com.example.gustavo.themovieapp.vm.MainViewModel
 
 
 class MainActivity : BasicListActivity(), NavigationView.OnNavigationItemSelectedListener{
@@ -61,9 +62,10 @@ class MainActivity : BasicListActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if(item.itemId.equals(R.id.nav_share))
             showRateDialog()
-        else
+        else {
+            (getViewModel() as MainViewModel).reinitNextPage()
             navigate(item.itemId)
-
+        }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
