@@ -1,11 +1,13 @@
 package com.example.gustavo.themovieapp.api
 
 import com.example.gustavo.themovieapp.model.Configuration
+import com.example.gustavo.themovieapp.model.ImageResult
 import com.example.gustavo.themovieapp.model.Result
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 import rx.Observable
 
@@ -28,6 +30,9 @@ interface RetrofitAPI {
 
     @GET("configuration")
     fun getConfigurations(@Query("api_key") key: String) : Observable<Configuration>
+
+    @GET("movie/{movie_id}/images")
+    fun getMovieImages(@Path("movie_id") movieId: Int, @Query("api_key") key: String) : Observable<ImageResult>
 
     companion object Factory{
         fun create(): RetrofitAPI {

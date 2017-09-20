@@ -18,13 +18,14 @@ class MovieViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(movie: Movie, listener: View.OnClickListener, listenerShare: View.OnClickListener) = with(itemView) {
         tv_tilte.text = movie.title
+        tv_voute.text = movie.vote_average.toString()
         tv_description.text = movie.overview
-        iv_image.loadUrl(movie.poster_path)
-        tv_details.setOnClickListener(listener)
+        iv_image.loadUrl(movie.backdrop_path)
+        iv_details.setOnClickListener(listener)
         iv_share.setOnClickListener(listenerShare)
     }
 
     fun ImageView.loadUrl(url: String?) {
-        Picasso.with(context).load(ConfigurationUtils.secure_base_url + ConfigurationUtils.logo_sizes + url).placeholder(android.R.drawable.ic_menu_upload).into(this)
+        Picasso.with(context).load(ConfigurationUtils.getFullUrl() + url).into(this)
     }
 }

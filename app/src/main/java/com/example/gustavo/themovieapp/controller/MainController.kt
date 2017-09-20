@@ -8,6 +8,7 @@ import com.example.gustavo.themovieapp.model.Configuration
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import com.example.gustavo.themovieapp.model.Error
+import com.example.gustavo.themovieapp.model.ImageResult
 
 
 /**
@@ -92,6 +93,20 @@ class MainController(val erro : MutableLiveData<com.example.gustavo.themovieapp.
 
     fun getConfiguration(configurationsLiveData: MutableLiveData<Configuration>){
         retrofitApi.getConfigurations("dadbc9342b99903fed37ffc73e2833bf")
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(
+                        {result ->
+                            configurationsLiveData.value = result
+                        }
+                        , {error ->
+                            Log.e("CONTROLLER", error.message)
+                            erro.value = Error(error.message)
+                })
+    }
+
+    fun getMovieImages(configurationsLiveData: MutableLiveData<ImageResult>, movieId : Int){
+        retrofitApi.getMovieImages(movieId ,"dadbc9342b99903fed37ffc73e2833bf")
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(

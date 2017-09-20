@@ -10,5 +10,7 @@ class ConfigurationUtils {
         var secure_base_url : String? = null
         var backdrop_sizes : String? = null
         var logo_sizes : String? = null
+
+        fun getFullUrl() : String = secure_base_url + backdrop_sizes
     }
 }

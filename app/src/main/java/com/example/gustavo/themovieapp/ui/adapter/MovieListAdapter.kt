@@ -38,7 +38,6 @@ class MovieListAdapter(var movies : List<Movie>, val context : Context) : Recycl
                 val share = Intent(Intent.ACTION_SEND)
                 share.type = "text/plain"
                 share.putExtra(Intent.EXTRA_TEXT, movies[position].title)
-
                 context.startActivity(Intent.createChooser(share, "Onde quer compartilhar?"))
             }
         })
