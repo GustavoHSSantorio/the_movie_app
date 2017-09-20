@@ -42,7 +42,7 @@ open class BasicListActivity : BasicActivity(MainViewModel::class.java), RatingD
 
     fun observeMovies(){
         (getViewModel() as MainViewModel).movieList.observe(this, Observer<List<Movie>> { movies ->
-            if(movies != null && movies.size > 0)
+            if(movies != null && movies.isNotEmpty())
                 (fragment as MovieListFragment).updateDataSet(movies)
             else
                 (fragment as MovieListFragment).showEmptyMessage()

@@ -22,7 +22,6 @@ import com.example.gustavo.themovieapp.vm.MainViewModel
  */
 class MovieListFragment : Fragment() {
 
-    var layoutManager : LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
     companion object {
         fun newInstance( bundle : Bundle) : Fragment {
@@ -31,7 +30,6 @@ class MovieListFragment : Fragment() {
             return fragment
         }
     }
-
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater?.inflate(R.layout.fragment_movie_list, container, false)
@@ -49,6 +47,7 @@ class MovieListFragment : Fragment() {
         }
         initRv()
     }
+
     override fun onResume() {
         super.onResume()
         forwardToMovieCall()
@@ -68,6 +67,7 @@ class MovieListFragment : Fragment() {
     }
 
     fun initRv(){
+        val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         rv_list.addOnScrollListener(InfiniteScrollListener({ forwardToMovieCall() }, layoutManager))
         rv_list.layoutManager = layoutManager
         rv_list.adapter = MovieListAdapter(ArrayList<Movie>(), activity)
